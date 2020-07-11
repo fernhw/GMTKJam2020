@@ -1,37 +1,36 @@
 ﻿
 using UnityEngine;
 
-public class GameRunner :MonoBehaviour {
+public class GameRunner : MonoBehaviour {
 
     public World world;
     public Settings settings;
     
     Deltas delta;
     InputsManager controls;
-    Data data;
+    Data data = new Data();
 
     void Start () {
 
-        // Init deltas for stability
-        delta = new Deltas();
-        delta.actionDelta = 1 / 60;
-        delta.mainDelta = 1 / 60;
+        GrabObjectsToWorld.Parse(ref world);
 
-        //init inputs
-        controls = new InputsManager();
-        controls.movement = new Vector2();
-        controls.pointer = new Vector2();
+        WorldInit.Parse(ref world, ref data,ref delta, ref controls);
 
     }
 
 
     void Update () {
 
-        DeltaTimeSystem.Parse(ref delta);
+        GameStatusManager.Parse(ref world, ref data);
 
         // Will receive players input and modify controls
         InputReceiver.Parse(ref controls);
         
+        //Todo: slow mo modifier in data for effects later
+        DeltaTimeSystem.Parse(ref delta);
+
+
+        //Todo: all actionable stuff
         CharacterActions.Parse(world,delta,controls);
 
         InputDeleter.Parse(ref controls);

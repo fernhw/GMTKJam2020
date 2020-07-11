@@ -9,6 +9,7 @@ public class ClickedHack : MonoBehaviour
     public TypeOfTarget type;
 
     GameRunner mainBehaviour;
+
     void Start()
     {
         mainBehaviour = ( GameRunner )FindObjectOfType(typeof(GameRunner));

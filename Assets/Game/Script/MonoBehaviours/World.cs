@@ -5,9 +5,18 @@
 /// </summary>
 public class World : MonoBehaviour
 {
-
+    [HideInInspector]
     public Movement penguinObj;
-    public Camera cam;
+
+    [HideInInspector]
+    public MainCamera cam;
+
+    // main spawn objects
+    [HideInInspector]
+    public GameStartingSpawn gameStartingSpawn;
+
+    [HideInInspector]
+    public EndGameSpawn endGameSpawn;
 
 
 }
