@@ -21,23 +21,21 @@ public class GameRunner:MonoBehaviour {
         controls = new InputsManager();
         controls.movement = new Vector2();
         controls.pointer = new Vector2();
+
     }
 
 
     void Update () {
 
-        delta.mainDelta = Time.deltaTime;
-        delta.actionDelta = Time.deltaTime /*modifier for SLOW MOTION PENGUINS*/;
-                
+        DeltaTimeSystem.Parse(ref delta);
+
+        // Will receive players input and modify controls
         InputReceiver.Parse(ref controls);
+        
+        CharacterActions.Parse(world,delta,controls);
 
-        world.penguinObj.GameUpdate(delta,controls);
+        InputDeleter.Parse(ref controls);
 
-
-
-
-
-        //  world.penguinObj << penguin actions
 
     }
 
