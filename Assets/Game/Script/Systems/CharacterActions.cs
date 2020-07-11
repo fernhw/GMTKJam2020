@@ -1,5 +1,8 @@
 ﻿
-using UnityEngine;
+
+/// <summary>
+/// All character actions worked from here
+/// </summary>
 
 public class CharacterActions
 {
