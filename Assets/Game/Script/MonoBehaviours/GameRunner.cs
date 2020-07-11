@@ -8,6 +8,7 @@ public class GameRunner:MonoBehaviour {
     
     Deltas delta;
     InputsManager controls;
+    Data data;
 
     void Start () {
 
@@ -42,9 +43,8 @@ public class GameRunner:MonoBehaviour {
 
 
 
-    public void ClickedData (string objectN, TypeOfTarget type, ClickedHack obj) {
-
-        if (disableUI)
+    public void ClickedData (string objectN, TypeOfTarget type, ClickedHack obj) { 
+        if (data.disableControls)
             return;
 
 

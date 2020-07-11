@@ -8,22 +8,16 @@ public class ClickedHack : MonoBehaviour
     public string objectIdentifier;
     public TypeOfTarget type;
 
-    Main mainBehaviour;
-    // Start is called before the first frame update
+    GameRunner mainBehaviour;
     void Start()
     {
-        mainBehaviour = ( Main )FindObjectOfType(typeof(Main));
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        mainBehaviour = ( GameRunner )FindObjectOfType(typeof(GameRunner));
     }
 
     private void OnMouseDown () {
         mainBehaviour.ClickedData(idString, type, this);
     }
+
 }
 
 public enum TypeOfTarget {
