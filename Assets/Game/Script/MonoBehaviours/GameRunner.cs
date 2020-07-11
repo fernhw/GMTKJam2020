@@ -7,7 +7,7 @@ public class GameRunner:MonoBehaviour {
     public Settings settings;
     
     Deltas delta;
-    InputsManager input;
+    InputsManager controls;
 
     void Start () {
 
@@ -17,9 +17,9 @@ public class GameRunner:MonoBehaviour {
         delta.mainDelta = 1 / 60;
 
         //init inputs
-        input = new InputsManager();
-        input.movement = new Vector2();
-
+        controls = new InputsManager();
+        controls.movement = new Vector2();
+        controls.pointer = new Vector2();
     }
 
 
@@ -27,16 +27,28 @@ public class GameRunner:MonoBehaviour {
 
         delta.mainDelta = Time.deltaTime;
         delta.actionDelta = Time.deltaTime /*modifier for SLOW MOTION PENGUINS*/;
+                
+        InputReceiver.Parse(ref controls);
 
-        input.movement.x = Input.GetAxis("Horizontal");
-        input.movement.y = Input.GetAxis("Vertical");
+        world.penguinObj.GameUpdate(delta,controls);
 
-        world.penguinObj.GameUpdate(delta,input);
+
+
+
 
         //  world.penguinObj << penguin actions
 
     }
 
+
+
+    public void ClickedData (string objectN, TypeOfTarget type, ClickedHack obj) {
+
+        if (disableUI)
+            return;
+
+
+    }
 
 
 }
