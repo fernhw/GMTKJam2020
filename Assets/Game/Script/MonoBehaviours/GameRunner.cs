@@ -1,7 +1,7 @@
 ﻿
 using UnityEngine;
 
-public class GameRunner:MonoBehaviour {
+public class GameRunner :MonoBehaviour {
 
     public World world;
     public Settings settings;
@@ -35,7 +35,6 @@ public class GameRunner:MonoBehaviour {
         CharacterActions.Parse(world,delta,controls);
 
         InputDeleter.Parse(ref controls);
-
 
     }
 
