@@ -56,8 +56,20 @@ public class InputReceiver {
             controls.holdingActionButton = false;
         }
 
-        if(controls.actionButton)
-            Debug.Log("click");
+
+        // You have to stop holding the action button to press it
+        // For constant fire
+        if (!controls.holdingQuackButton) {
+            controls.quak = ProInput.B;
+        }
+        if (ProInput.B) {
+            controls.holdingQuackButton = true;
+        } else {
+            controls.holdingQuackButton = false;
+        }
+
+
+
     }
 
 }

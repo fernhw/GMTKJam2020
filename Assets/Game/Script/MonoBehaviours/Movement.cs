@@ -49,6 +49,11 @@ public class Movement:MonoBehaviour {
             penguinRenderer.flipX = true;
         }
 
+        if (input.quak) {
+            anime.PlayInFixedTime("quack");
+            world.quack.Play();
+        }
+
 
         if (input.actionButton) {
             if (wandangle >= -30 && wandangle < 30) {
@@ -90,17 +95,15 @@ public class Movement:MonoBehaviour {
             float xDist = ( alienPosition.x - this.transform.localPosition.x );
             float yDist = ( alienPosition.y - this.transform.localPosition.y );
             float distance = xDist * xDist + yDist * yDist;
-            Debug.Log("collision w/ enemy");
-            Debug.Log(distance);
 
             if (distance < 0.8f) {
 
                 world.gameOver.Play();
-                Debug.Log("dead");
+               // Debug.Log("dead");
                 anime.PlayInFixedTime(die);
                 data.gameStatus = GameState.GAME_OVER;
             } else {
-                Debug.Log("alive");
+                //Debug.Log("alive");
             }
         }
 
@@ -120,7 +123,7 @@ public class Movement:MonoBehaviour {
             if (animationCurrent != walk) {
                 anime.Play(walk);
                 animationCurrent = walk;
-                Debug.Log("walllll");
+               // Debug.Log("walllll");
             }
         } else if (movingLeft) {
             penguinRenderer.flipX = true;

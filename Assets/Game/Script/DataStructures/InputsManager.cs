@@ -27,6 +27,8 @@ public class InputsManager
     public bool actionButton = false;
     public bool holdingActionButton = false;
 
+    public bool holdingQuackButton = false;
+
     /// <summary>
     /// A button makes the penguin make a sound
     /// </summary>
