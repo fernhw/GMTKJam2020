@@ -35,7 +35,7 @@ public class GameRunner : MonoBehaviour {
 
         CharacterMovement.Parse(ref data, ref world, delta, controls, settings);
 
-        CharacterActions.Parse(ref data, world, controls, settings);
+        CharacterActions.Parse(ref data, world, controls, settings, controls);
 
         CameraMovement.Parse(ref data, ref world, delta, controls, settings);
 

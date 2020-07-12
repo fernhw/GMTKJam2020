@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class CharacterActions
 {
-    public static void Parse (ref Data data, World world, InputsManager controls, Settings settings) {
+    public static void Parse (ref Data data, World world, InputsManager controls, Settings settings, InputsManager input) {
 
         Vector3 characterPos = world.penguinObj.transform.localPosition;
         
@@ -21,6 +21,12 @@ public class CharacterActions
         data.angleToMouse = Mathf.Atan2(data.characterToPointer.y, data.characterToPointer.x) * Mathf.Rad2Deg;
 
         Debug.Log(data.angleToMouse);
+
+        PenguinData charData = new PenguinData {
+            wandAngle = data.angleToMouse
+        };
+
+        world.penguinObj.GameUpdate(charData, input);
 
     }
 }
