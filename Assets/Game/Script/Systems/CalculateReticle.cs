@@ -19,5 +19,6 @@ public class CalculateReticle {
         data.characterToPointer.y = controls.pointer.y - data.characterPositionToCamera.y;
         data.angleToMouse = Mathf.Atan2(data.characterToPointer.y, data.characterToPointer.x) * Mathf.Rad2Deg;
 
+
     }
 }

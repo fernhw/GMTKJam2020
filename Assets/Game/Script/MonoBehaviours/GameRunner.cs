@@ -30,15 +30,15 @@ public class GameRunner : MonoBehaviour {
 
         // Will receive players input and modify controls
         InputReceiver.Parse(delta, world, ref controls);
-
-
+        
         CalculateReticle.Parse(ref data, world, controls, settings);
-
-
+        
         CharacterMovement.Parse(ref data, ref world, delta, controls, settings);
 
-        CharacterActions.Parse(ref data,  world, controls);
+        ShootingAction.Parse(ref data, ref world, delta, controls, settings);
 
+        CharacterActions.Parse(ref data,  world, controls);
+        
         CameraMovement.Parse(ref data, ref world, delta, controls, settings);
 
         // clears input like buttons

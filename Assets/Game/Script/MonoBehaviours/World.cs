@@ -1,4 +1,7 @@
 ﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
 
 /// <summary>
 /// Receive all objects, doesn't manipulate them only for access
@@ -18,6 +21,12 @@ public class World : MonoBehaviour
     [HideInInspector]
     public EndGameSpawn endGameSpawn;
 
+
+    [HideInInspector]
+    public List<Alien> alienPool;
+
+    [HideInInspector]
+    public List<Bullet> bulletPool;
 
 
 

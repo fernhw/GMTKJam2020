@@ -12,6 +12,11 @@ public class GrabObjectsToWorld:Object {
 
         world.cam = ( MainCamera )FindObjectOfType(typeof(MainCamera));
         world.penguinObj = ( Movement )FindObjectOfType(typeof(Movement));
+        
+        MonoBehaviour[] allMB = FindObjectsOfType<MonoBehaviour>();
 
+        ScanWorld.Parse(ref world, allMB);
     }
 }
+
+
