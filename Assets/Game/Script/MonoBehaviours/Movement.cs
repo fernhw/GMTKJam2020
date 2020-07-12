@@ -51,7 +51,7 @@ public class Movement:MonoBehaviour {
         }
 
         if (input.quak) {
-            anime.PlayInFixedTime("quack");
+            anime.PlayInFixedTime("idle");
             world.quack.Play();
         }
 
@@ -90,7 +90,12 @@ public class Movement:MonoBehaviour {
 
         int alienPoolLen = world.alienPool.Count;
         for (int i = 0; i < alienPoolLen; i++) {
+
             Alien movingAlien = world.alienPool[i];
+
+            if (!movingAlien.active)
+                continue;
+
             Vector3 alienPosition = movingAlien.transform.localPosition;
 
             float xDist = ( alienPosition.x - this.transform.localPosition.x );
