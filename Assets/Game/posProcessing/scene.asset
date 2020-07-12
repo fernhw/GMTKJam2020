@@ -17,7 +17,7 @@ MonoBehaviour:
     m_Settings:
       mode: 0
       depth:
-        scale: 1
+        scale: 0.11
       motionVectors:
         sourceOpacity: 1
         motionImageOpacity: 0
@@ -30,7 +30,7 @@ MonoBehaviour:
     m_Settings:
       excludeSkybox: 1
   antialiasing:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       method: 0
       fxaaSettings:
@@ -72,13 +72,13 @@ MonoBehaviour:
   depthOfField:
     m_Enabled: 0
     m_Settings:
-      focusDistance: 10
-      aperture: 5.6
+      focusDistance: 0.16
+      aperture: 0.1
       focalLength: 50
-      useCameraFov: 0
-      kernelSize: 1
+      useCameraFov: 1
+      kernelSize: 0
   motionBlur:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       shutterAngle: 270
       sampleCount: 20
@@ -101,27 +101,27 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 1.87
-        threshold: 1.1
-        softKnee: 0.5
+        intensity: 0.54
+        threshold: 1.25
+        softKnee: 0.59
         radius: 4
         antiFlicker: 0
       lensDirt:
         texture: {fileID: 0}
         intensity: 3
   colorGrading:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       tonemapping:
         tonemapper: 2
-        neutralBlackIn: 0.004
-        neutralWhiteIn: 10
+        neutralBlackIn: 0.024
+        neutralWhiteIn: 11.8
         neutralBlackOut: 0
         neutralWhiteOut: 10
         neutralWhiteLevel: 5.3
         neutralWhiteClip: 10
       basic:
-        postExposure: 1.25
+        postExposure: 0.6
         temperature: 0
         tint: 0
         hueShift: 0
@@ -131,13 +131,13 @@ MonoBehaviour:
         red: {x: 1, y: 0, z: 0}
         green: {x: 0, y: 1, z: 0}
         blue: {x: 0, y: 0, z: 1}
-        currentEditingChannel: 1
+        currentEditingChannel: 0
       colorWheels:
         mode: 1
         log:
-          slope: {r: 1, g: 0.99532795, b: 0.87679744, a: 0}
-          power: {r: 0.7363278, g: 1, b: 0.98428375, a: 0}
-          offset: {r: 1, g: 0.959696, b: 0.67542195, a: 0}
+          slope: {r: 1, g: 1, b: 1, a: 0}
+          power: {r: 1, g: 1, b: 1, a: 0}
+          offset: {r: 1, g: 1, b: 1, a: 0}
         linear:
           lift: {r: 0, g: 0, b: 0, a: 0}
           gamma: {r: 0, g: 0, b: 0, a: 0}

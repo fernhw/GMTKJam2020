@@ -17,7 +17,7 @@ public class CharacterLaunching
 
         characterPos.x += data.xPush * delta.actionDelta * 2;
 
-        data.gravity += ( -4 - data.gravity ) * delta.actionDelta * 3;
+        data.gravity += ( -4 - data.gravity ) * delta.actionDelta * 1;
         characterPos.y += data.gravity * delta.actionDelta * 2;
         Debug.Log(data.gravity);
         if (characterPos.y < 0) {
@@ -25,10 +25,15 @@ public class CharacterLaunching
             data.gravity = 0;
         }
         if(characterPos.y == 0) {
-            data.xPush += ( 0 - data.xPush ) * delta.actionDelta * 5;
+            data.xPush += ( 0 - data.xPush ) * delta.actionDelta * 10;
             data.gravity = 0;
         }
 
+        if (characterPos.y > 2.9f)
+            characterPos.y = 2.9f;
+
+        if (characterPos.x < -1.4f)
+            characterPos.x = -1.4f;
 
         world.penguinObj.transform.localPosition = characterPos;
 
