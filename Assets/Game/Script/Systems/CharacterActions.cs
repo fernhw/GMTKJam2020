@@ -17,7 +17,7 @@ public class CharacterActions
             wandAngle = data.angleToMouse
         };
 
-        world.penguinObj.GameUpdate(charData, input,ref data, settings);
+        world.penguinObj.GameUpdate(charData, input,ref data, settings, world);
 
     }
 }

@@ -37,7 +37,7 @@ public class Movement:MonoBehaviour {
         anime = penguinRenderer.GetComponent<Animator>();
     }
     string animationCurrent = "";
-    public void GameUpdate (PenguinData charData, InputsManager input, ref Data data, Settings settings) {
+    public void GameUpdate (PenguinData charData, InputsManager input, ref Data data, Settings settings, World world) {
         wandangle = charData.wandAngle;
 
         bool movingRight = ( data.xPush < -0.001f );
@@ -108,6 +108,29 @@ public class Movement:MonoBehaviour {
             }
         }
 
+        int alienPoolLen = world.alienPool.Count;
+        for (int i = 0; i < alienPoolLen; i++)
+        {
+            Alien movingAlien = world.alienPool[i];
+            Vector3 alienPosition = movingAlien.transform.localPosition;
+
+            float xDist = (alienPosition.x - this.transform.localPosition.x);
+            float yDist = (alienPosition.y - this.transform.localPosition.y);
+            float distance = xDist * xDist + yDist * yDist;
+            Debug.Log("collision w/ enemy");
+            Debug.Log(distance);
+
+            if (distance < 0.5f)
+            {
+                Debug.Log("dead");
+                anime.PlayInFixedTime(die);
+                data.gameStatus = GameState.GAME_OVER;
+            }
+            else
+            {
+                Debug.Log("alive");
+            }
+        }
 
     }
 }

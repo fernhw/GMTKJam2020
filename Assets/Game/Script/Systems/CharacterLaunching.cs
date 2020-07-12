@@ -19,7 +19,7 @@ public class CharacterLaunching
 
         data.gravity += ( -4 - data.gravity ) * delta.actionDelta * 1;
         characterPos.y += data.gravity * delta.actionDelta * 2;
-        Debug.Log(data.gravity);
+        //Debug.Log(data.gravity);
         if (characterPos.y < 0) {
             characterPos.y = 0;
             data.gravity = 0;
