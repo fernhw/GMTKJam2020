@@ -10,6 +10,7 @@ tpsheetFileNames:
 - Assets/Game/Sprites/enemy.tpsheet
 - Assets/Game/Sprites/gradients.tpsheet
 - Assets/Game/Sprites/idle.tpsheet
+- Assets/Game/Sprites/quack.tpsheet
 - Assets/Game/Sprites/target.tpsheet
 - Assets/Game/Sprites/test.tpsheet
 - Assets/Game/Sprites/walking.tpsheet
@@ -23,11 +24,13 @@ textureFileNames:
 - Assets/Game/Sprites/enemy.png
 - Assets/Game/Sprites/gradients.png
 - Assets/Game/Sprites/idle.png
+- Assets/Game/Sprites/quack.png
 - Assets/Game/Sprites/target.png
 - Assets/Game/Sprites/test.png
 - Assets/Game/Sprites/walking.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- 
 - 
 - 
 - 
