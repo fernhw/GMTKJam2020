@@ -1454,6 +1454,8 @@ MonoBehaviour:
   cam: {fileID: 0}
   gameStartingSpawn: {fileID: 0}
   endGameSpawn: {fileID: 0}
+  alienPool: []
+  bulletPool: []
 --- !u!1 &635421556
 GameObject:
   m_ObjectHideFlags: 0
@@ -1531,8 +1533,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   characterSpeed: 0.6
+  bulletSpeed: 10
   penguinYUpPivotFix: 0.5
   cameraLerpSpeed: {x: 3, y: 1}
+  cameraBounds: {x: 8, y: 6}
 --- !u!1001 &712035582
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1724,6 +1728,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Penguin
+      objectReference: {fileID: 0}
+    - target: {fileID: 9023739770181017976, guid: e185248eca34c524ab900f48363cb9a0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9023739770181017977, guid: e185248eca34c524ab900f48363cb9a0,
         type: 3}
