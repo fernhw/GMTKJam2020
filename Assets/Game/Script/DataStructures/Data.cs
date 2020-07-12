@@ -21,7 +21,10 @@ public class Data
     public float alienTimer = 0;
 
     public bool disableWalk = false;
-    
+
+    public float gravity = 0;
+    public float xPush = 0;
+
     public GameState gameStatus = GameState.GAME_ACTIVE;
 
     public bool disableControls = false;

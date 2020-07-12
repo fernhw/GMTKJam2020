@@ -2339,7 +2339,7 @@ MonoBehaviour:
   penguinYUpPivotFix: 0.5
   alienAppearance: 1
   alienSpeed: 1
-  cameraLerpSpeed: {x: 3, y: 1}
+  cameraLerpSpeed: {x: 3, y: 3}
   cameraBounds: {x: 8, y: 6}
 --- !u!1001 &712035582
 PrefabInstance:
@@ -2583,17 +2583,17 @@ PrefabInstance:
     - target: {fileID: 1714492670762530423, guid: e185248eca34c524ab900f48363cb9a0,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.8261719
+      value: 0.7441406
       objectReference: {fileID: 0}
     - target: {fileID: 1714492670762530423, guid: e185248eca34c524ab900f48363cb9a0,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.96875
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1714492670762530423, guid: e185248eca34c524ab900f48363cb9a0,
         type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9023739769868940906, guid: e185248eca34c524ab900f48363cb9a0,
         type: 3}
@@ -6703,7 +6703,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 331c97f3f56d74d9288db5b031a3483e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f286cf28014ff47159053e45ea75f63d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

@@ -42,6 +42,7 @@ public class GameRunner : MonoBehaviour {
         CharacterActions.Parse(ref data,  world, controls, settings);
         
         CameraMovement.Parse(ref data, ref world, delta, controls, settings);
+        CharacterLaunching.Parse(ref data, ref world, delta, controls, settings);
 
         // clears input like buttons
         InputDeleter.Parse(ref controls);

@@ -28,19 +28,6 @@ public class Movement:MonoBehaviour {
         disableWalkingAnim = true;
 
         yield return new WaitForSeconds(1);
-        //    int i = 0;
-        //    while (i < 5)
-        //   {
-        //   penguinRenderer.sprite = fpose[i];
-        //   i++;
-        //    yield return new WaitForEndOfFrame();
-        //yield return 0;
-        //  }
-        // StartCoroutine(forward_pose()); //stack overflow much?
-        //anime.SetBool(forward, false);
-        //anime.SetBool(dforward, false);
-        //// anime.SetBool(upward, false);
-        // anime.SetBool(walk, true);
 
         disableWalkingAnim = false;
     }
@@ -50,63 +37,53 @@ public class Movement:MonoBehaviour {
     }
     string animationCurrent = "";
     public void GameUpdate (PenguinData charData, InputsManager input, ref Data data, Settings settings) {
-
-
-
         wandangle = charData.wandAngle;
 
-        //Debug.Log(input.click);
+        bool movingRight = ( data.xPush < -0.001f );
+        bool movingLeft = ( data.xPush > 0.001f );
+
+        if (movingRight) {
+            penguinRenderer.flipX = false;            
+        } else if (movingLeft) {
+            penguinRenderer.flipX = true;
+        }
+
+
         if (input.actionButton) {
-            //anime.StopPlayback();
             if (wandangle >= -30 && wandangle < 30) {
                 penguinRenderer.flipX = false;
-                //    if (animationCurrent != forward)
                 anime.PlayInFixedTime(forward);
                 animationCurrent = forward;
             } else if (wandangle >= 30 && wandangle < 60) {
-
                 penguinRenderer.flipX = false;
-                //   if (animationCurrent != dforward)
-
                 anime.PlayInFixedTime(dforward);
                 animationCurrent = dforward;
             } else if (wandangle >= 60 && wandangle < 120) {
-
                 penguinRenderer.flipX = false;
-                //   if (animationCurrent != upward)
                 anime.PlayInFixedTime(upward);
-
                 animationCurrent = upward;
-            } else if (wandangle >= 120 && wandangle < 150) {
-
+            } else if ((wandangle >= 120 && wandangle < 150)) {
                 penguinRenderer.flipX = true;
-                //if (animationCurrent != dforward)
                 anime.PlayInFixedTime(dforward);
-
-                anime.playbackTime = 0;
                 animationCurrent = dforward;
             } else if (wandangle >= 150 || wandangle < -150) {
-
                 penguinRenderer.flipX = true;
-                //   if (animationCurrent != forward)
                 anime.PlayInFixedTime(forward);
-
-                anime.playbackTime = 0;
                 animationCurrent = forward;
             }
+
             data.disableWalk = true;
             disableWalkingAnim = true;
             StopAllCoroutines();
             StartCoroutine(forward_pose());
         }
-
         if (disableWalkingAnim)
             return;
 
         data.disableWalk = false;
 
-        bool movingRight = ( input.movement.x > 0 );
-        bool movingLeft = ( input.movement.x < 0 );
+        movingRight = ( input.movement.x > 0 ) || ( data.xPush < -0.001f );
+        movingLeft = ( input.movement.x < 0 ) || ( data.xPush > 0.001f );
 
         if (movingRight) {
             penguinRenderer.flipX = false;

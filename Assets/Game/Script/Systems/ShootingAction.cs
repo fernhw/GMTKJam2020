@@ -39,6 +39,8 @@ public class ShootingAction {
             world.bulletPool[activeBulletIndex].transform.localPosition = characterPos;
             world.bulletPool[activeBulletIndex].transform.localEulerAngles = new Vector3(0, 0, data.angleToMouse);
 
+            data.xPush = -Mathf.Cos(data.angleToMouse * Mathf.Deg2Rad);
+            data.gravity = -Mathf.Sin(data.angleToMouse * Mathf.Deg2Rad) * 3;
             world.spell2.Play();
         }
 
