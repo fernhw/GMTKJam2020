@@ -223,7 +223,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.69921875, y: 0.7402344}
+  m_Size: {x: 0.8261719, y: 0.96875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -370,3 +370,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   penguinRenderer: {fileID: 1714492670762530423}
+  wandangle: 0

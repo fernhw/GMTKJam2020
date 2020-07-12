@@ -7,14 +7,17 @@ using UnityEngine;
 
 
 
-public class EnemyAction {
+public class EnemyAction
+{
 
-    public static void Parse (ref Data data, ref World world, Deltas delta, InputsManager controls, Settings settings) {
+    public static void Parse(ref Data data, ref World world, Deltas delta, InputsManager controls, Settings settings)
+    {
 
         bool createAlien = false;
         data.alienTimer += delta.actionDelta * settings.alienAppearance;
 
-        if(data.alienTimer > 1) {
+        if (data.alienTimer > 1)
+        {
             createAlien = true;
             data.alienTimer = 0;
         }
@@ -35,9 +38,11 @@ public class EnemyAction {
         int activeAlienIndex = 0;
         bool areThereActiveAlien = false;
         // pick innactive alien
-        for (int i = 0; i < alienPoolLen; i++) {
+        for (int i = 0; i < alienPoolLen; i++)
+        {
             Alien indexAlien = world.alienPool[i];
-            if (!indexAlien.active) {
+            if (!indexAlien.active)
+            {
                 activeAlienIndex = i;
                 areThereActiveAlien = true;
                 break;
@@ -46,7 +51,8 @@ public class EnemyAction {
 
 
         // ACTIVATE first inactive alien
-        if (createAlien && areThereActiveAlien) {
+        if (createAlien && areThereActiveAlien)
+        {
 
             Vector3 positionSpawn = new Vector3();
 
@@ -54,11 +60,14 @@ public class EnemyAction {
 
             float randomizer = Random.value * 16 - 8;
 
-            if (quadrant == 1) {
+            if (quadrant == 1)
+            {
 
                 positionSpawn.x = cameraLeftBound;
                 positionSpawn.y = Mathf.Abs(randomizer - 1) + 1;
-            } else {
+            }
+            else
+            {
 
                 positionSpawn.x = cameraRightBound;
                 positionSpawn.y = Mathf.Abs(randomizer - 1) + 1;
@@ -75,7 +84,8 @@ public class EnemyAction {
 
 
         // animate aliens
-        for (int i = 0; i < alienPoolLen; i++) {
+        for (int i = 0; i < alienPoolLen; i++)
+        {
 
             Alien movingAlien = world.alienPool[i];
 
@@ -96,13 +106,15 @@ public class EnemyAction {
             movingAlien.transform.localPosition = newAlienPosition;
             alienPosition = movingAlien.transform.localPosition;
 
-            for (int j = 0; j < bulletPoolLen; j++) {
+            for (int j = 0; j < bulletPoolLen; j++)
+            {
                 Bullet bullet = world.bulletPool[j];
-                float xDist = ( alienPosition.x - bullet.transform.localPosition.x );
-                float yDist = ( alienPosition.y - bullet.transform.localPosition.y );
-                float distance = xDist* xDist + yDist*yDist;
+                float xDist = (alienPosition.x - bullet.transform.localPosition.x);
+                float yDist = (alienPosition.y - bullet.transform.localPosition.y);
+                float distance = xDist * xDist + yDist * yDist;
 
-                if(distance < .1f) {
+                if (distance < .1f)
+                {
                     movingAlien.active = false;
                     movingAlien.gameObject.SetActive(false);
                 }

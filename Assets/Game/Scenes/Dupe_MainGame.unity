@@ -203,6 +203,7 @@ MonoBehaviour:
   endGameSpawn: {fileID: 0}
   alienPool: []
   bulletPool: []
+  spell2: {fileID: 0}
 --- !u!1 &635421556
 GameObject:
   m_ObjectHideFlags: 0
