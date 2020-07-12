@@ -18,6 +18,7 @@ public class Movement:MonoBehaviour {
 
     readonly string idle = "idle";
     readonly string die = "die";
+    readonly string quack = "quack";
     //readonly string dback = "diagonal_back";
     //readonly string backward = "backward";
 
