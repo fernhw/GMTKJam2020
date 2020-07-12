@@ -120,8 +120,10 @@ public class Movement:MonoBehaviour {
             Debug.Log("collision w/ enemy");
             Debug.Log(distance);
 
-            if (distance < 0.5f)
+            if (distance < 0.8f)
             {
+
+                world.gameOver.Play();
                 Debug.Log("dead");
                 anime.PlayInFixedTime(die);
                 data.gameStatus = GameState.GAME_OVER;

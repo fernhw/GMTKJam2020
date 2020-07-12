@@ -134,6 +134,7 @@ public class EnemyAction
                 if (distance < .1f)
                 {
                     // Enemy Death
+                    world.enemydeath.Play();
                     movingAlien.active = false;
                     movingAlien.gameObject.SetActive(false);
                 }
