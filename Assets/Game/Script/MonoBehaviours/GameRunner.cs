@@ -1,6 +1,7 @@
 ﻿
 using UnityEngine;
-
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameRunner : MonoBehaviour {
 
@@ -23,6 +24,9 @@ public class GameRunner : MonoBehaviour {
 
 
     void Update () {
+
+        if (( data.gameStatus == GameState.GAME_OVER || data.gameStatus == GameState.WINS_GAME ))
+            return;
 
         //Todo: slow mo modifier in data for effects later
         DeltaTimeSystem.Parse(ref delta);
@@ -47,6 +51,14 @@ public class GameRunner : MonoBehaviour {
         // clears input like buttons
         InputDeleter.Parse(ref controls);
 
+        if(data.gameStatus == GameState.GAME_OVER) {
+            StartCoroutine(Death());
+        }
+
+        if (data.gameStatus == GameState.WINS_GAME) {
+            StartCoroutine(Win());
+        }
+
     }
 
 
@@ -56,6 +68,18 @@ public class GameRunner : MonoBehaviour {
             return;
 
 
+    }
+
+    IEnumerator Death () {
+        yield return new WaitForSeconds(4);
+
+        SceneManager.LoadScene("GameOver");
+    }
+
+    IEnumerator Win () {
+        yield return new WaitForSeconds(4);
+
+        SceneManager.LoadScene("EndGame");
     }
 
 

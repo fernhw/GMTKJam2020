@@ -18,7 +18,7 @@ public class GameStart : MonoBehaviour
     {
         if (( Input.GetMouseButtonDown(0) )) {
             SceneManager.LoadScene(sceneName);
-            this.gameObject.SetActive(false);
+            //this.gameObject.SetActive(false);
         }
 
     }
