@@ -31,4 +31,10 @@ public class World : MonoBehaviour
 
     public AudioSource spell2;
 
+    public AudioSource quack;
+
+    public AudioSource enemydeath;
+
+
+
 }

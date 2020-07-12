@@ -20,7 +20,7 @@ public class CharacterMovement {
 
         world.penguinObj.transform.localPosition = characterPos;
 
-        if (world.penguinObj.transform.localPosition.x > 50) {
+        if (world.penguinObj.transform.localPosition.x > 45) {
             data.gameStatus = GameState.WINS_GAME;
         }
     }
