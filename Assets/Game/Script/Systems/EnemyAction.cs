@@ -113,6 +113,7 @@ public class EnemyAction
 
 
 
+
             for (int j = 0; j < bulletPoolLen; j++)
             {
                 Bullet bullet = world.bulletPool[j];
@@ -126,11 +127,13 @@ public class EnemyAction
 
                 if (distance < .1f)
                 {
+                    // Enemy Death
                     movingAlien.active = false;
                     movingAlien.gameObject.SetActive(false);
                 }
 
             }
+
         }
     }
 }
