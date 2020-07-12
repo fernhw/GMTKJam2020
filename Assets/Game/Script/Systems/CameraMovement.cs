@@ -25,6 +25,18 @@ public class CameraMovement {
         data.lerpedCameraPosition.y = camPosY + ( data.goalCamPos.y - camPosY ) * settings.cameraLerpSpeed.y * delta.actionDelta;
         data.lerpedCameraPosition.z = camPosZ + ( data.goalCamPos.z - camPosZ ) * .1f * delta.actionDelta;
 
+        if(data.lerpedCameraPosition.y > 2.4f) {
+            data.lerpedCameraPosition.y = 2.4f;
+        }
+
+        if (data.lerpedCameraPosition.x < -1) {
+            data.lerpedCameraPosition.x = -1f;
+        }
+
+        if (data.lerpedCameraPosition.x > 46) {
+            data.lerpedCameraPosition.x = 46f;
+        }
+
         world.cam.transform.localPosition = data.lerpedCameraPosition;
 
     }
