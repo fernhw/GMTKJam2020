@@ -2,16 +2,19 @@ version: 2
 importPivots: 1
 tpsheetFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
+- Assets/Game/Img/img.tpsheet
 - Assets/Game/Sprites/target.tpsheet
 - Assets/Game/Sprites/test.tpsheet
 - Assets/Game/Sprites/walking.tpsheet
 textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
+- Assets/Game/Img/img.png
 - Assets/Game/Sprites/target.png
 - Assets/Game/Sprites/test.png
 - Assets/Game/Sprites/walking.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- 
 - 
 - 
 - 

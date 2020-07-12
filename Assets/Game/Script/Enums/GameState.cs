@@ -7,4 +7,5 @@ public enum GameState
     GAME_ACTIVE,
     PAUSED,
     WINS_GAME,
+    GAME_OVER
 }

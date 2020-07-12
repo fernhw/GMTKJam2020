@@ -1,0 +1,595 @@
+fileFormatVersion: 2
+guid: fab0ed5091d9b4e8eb1c13b4b7bedd5e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2992955470440762359
+    second: 2 Tanks
+  - first:
+      213: 7503535752923180414
+    second: Bean Poster
+  - first:
+      213: -5323975769511507977
+    second: Big Shelf 2
+  - first:
+      213: 1464908129371677015
+    second: Big Shelf
+  - first:
+      213: 7675879891072985395
+    second: Bubbles Poster
+  - first:
+      213: -4704848311800635442
+    second: Chandelier
+  - first:
+      213: 3363322587309820708
+    second: 'Cylindrical Tank '
+  - first:
+      213: 2804968355760249059
+    second: Desk
+  - first:
+      213: -6287002357799567390
+    second: Door
+  - first:
+      213: -5041690755342988407
+    second: Fish Tank
+  - first:
+      213: -4734136299089562566
+    second: Laser Poster
+  - first:
+      213: -3429753330676762978
+    second: Plant
+  - first:
+      213: 4745631673375686385
+    second: Poster 1
+  - first:
+      213: -5119852741402810029
+    second: Shelf 1
+  - first:
+      213: 15151246325897053
+    second: Shelf 2
+  - first:
+      213: 4988686748243292274
+    second: Tank 1
+  - first:
+      213: 7471813149976365250
+    second: Tank 2
+  - first:
+      213: -5301456894643067148
+    second: Tank 3
+  - first:
+      213: -8320287610958445814
+    second: Tank 4
+  - first:
+      213: 7480750836689923086
+    second: Tube 1
+  - first:
+      213: -5036922392576420504
+    second: Tube 2
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 2 Tanks
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 1534
+        width: 683
+        height: 513
+      alignment: 9
+      pivot: {x: 0.50073206, y: 0.51364523}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 904f0d36bd2e676d0800000000000000
+      internalID: -2992955470440762359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bean Poster
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 1304
+        width: 268
+        height: 155
+      alignment: 9
+      pivot: {x: 0.49813432, y: 0.4967742}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7ded68030ae12860800000000000000
+      internalID: 7503535752923180414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big Shelf 2
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 950
+        width: 587
+        height: 582
+      alignment: 9
+      pivot: {x: 0.5136286, y: 0.5103093}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f7ca79ce307d16b0800000000000000
+      internalID: -5323975769511507977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big Shelf
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1461
+        width: 748
+        height: 586
+      alignment: 9
+      pivot: {x: 0.4893048, y: 0.50767916}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 751e7c7ae26645410800000000000000
+      internalID: 1464908129371677015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubbles Poster
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 1147
+        width: 268
+        height: 155
+      alignment: 9
+      pivot: {x: 0.49813432, y: 0.5032258}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33928f5a714368a60800000000000000
+      internalID: 7675879891072985395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chandelier
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 354
+        width: 318
+        height: 303
+      alignment: 9
+      pivot: {x: 0.49213836, y: 0.48679867}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecfd605436505beb0800000000000000
+      internalID: -4704848311800635442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 'Cylindrical Tank '
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 209
+        width: 324
+        height: 448
+      alignment: 9
+      pivot: {x: 0.5231481, y: 0.51227677}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42b46a1d21cecae20800000000000000
+      internalID: 3363322587309820708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desk
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 659
+        width: 413
+        height: 289
+      alignment: 9
+      pivot: {x: 0.4842615, y: 0.5069204}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e81d43bbdf3de620800000000000000
+      internalID: 2804968355760249059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Door
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 1462
+        width: 587
+        height: 585
+      alignment: 9
+      pivot: {x: 0.4855196, y: 0.4905983}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ef30516aa410c8a0800000000000000
+      internalID: -6287002357799567390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fish Tank
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 1270
+        width: 459
+        height: 190
+      alignment: 9
+      pivot: {x: 0.5043573, y: 0.55263156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98b096458f0580ab0800000000000000
+      internalID: -5041690755342988407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser Poster
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 829
+        width: 268
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a34fb765e18fc4eb0800000000000000
+      internalID: -4734136299089562566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plant
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 209
+        width: 456
+        height: 489
+      alignment: 9
+      pivot: {x: 0.4989035, y: 0.49795502}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e967cc174811760d0800000000000000
+      internalID: -3429753330676762978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poster 1
+      rect:
+        serializedVersion: 2
+        x: 1885
+        y: 1172
+        width: 152
+        height: 156
+      alignment: 9
+      pivot: {x: 0.49671054, y: 0.50641024}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fe766e0ddedbd140800000000000000
+      internalID: 4745631673375686385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shelf 1
+      rect:
+        serializedVersion: 2
+        x: 1885
+        y: 1330
+        width: 156
+        height: 130
+      alignment: 9
+      pivot: {x: 0.49358973, y: 0.49615383}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 359206ece01a2f8b0800000000000000
+      internalID: -5119852741402810029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shelf 2
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 986
+        width: 293
+        height: 159
+      alignment: 9
+      pivot: {x: 0.48634812, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d57d82f6af3d53000800000000000000
+      internalID: 15151246325897053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank 1
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 700
+        width: 457
+        height: 282
+      alignment: 9
+      pivot: {x: 0.4890591, y: 0.4822695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2707db49a206b3540800000000000000
+      internalID: 4988686748243292274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank 2
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 984
+        width: 458
+        height: 284
+      alignment: 9
+      pivot: {x: 0.49563318, y: 0.48591548}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c80f68f87631b760800000000000000
+      internalID: 7471813149976365250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank 3
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 904
+        width: 450
+        height: 274
+      alignment: 9
+      pivot: {x: 0.49444443, y: 0.49452555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f621caea017d66b0800000000000000
+      internalID: -5301456894643067148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank 4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1180
+        width: 455
+        height: 279
+      alignment: 9
+      pivot: {x: 0.4868132, y: 0.49462366}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a030db72086688c80800000000000000
+      internalID: -8320287610958445814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tube 1
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 1293
+        width: 63
+        height: 121
+      alignment: 9
+      pivot: {x: 0.48412699, y: 0.5123967}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0ceb125047f0d760800000000000000
+      internalID: 7480750836689923086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tube 2
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 1416
+        width: 82
+        height: 116
+      alignment: 9
+      pivot: {x: 0.44512194, y: 0.49568966}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 865954d45c1491ab0800000000000000
+      internalID: -5036922392576420504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

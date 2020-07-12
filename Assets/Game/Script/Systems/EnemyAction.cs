@@ -9,6 +9,13 @@ public class EnemyAction {
 
     public static void Parse (ref Data data, ref World world, Deltas delta, InputsManager controls, Settings settings) {
 
+        bool createAlien = false;
+        data.alienTimer += delta.actionDelta * settings.alienAppearance;
+
+        if(data.alienTimer > 1) {
+            createAlien = true;
+        }
+
         Vector3 cameraPosition = world.cam.transform.localPosition;
         Vector3 characterPos = world.penguinObj.transform.localPosition;
 
@@ -22,19 +29,21 @@ public class EnemyAction {
         int alienPoolLen = world.alienPool.Count;
 
         int activeAlienIndex = 0;
-
+        bool areThereActiveAlien = false;
         // pick innactive alien
         for (int i = 0; i < alienPoolLen; i++) {
             Alien indexAlien = world.alienPool[i];
             if (!indexAlien.active) {
                 activeAlienIndex = i;
+                areThereActiveAlien = true;
                 break;
             }
         }
 
 
         // ACTIVATE first inactive alien
-        if (controls.actionButton) {
+        if (createAlien && areThereActiveAlien) {
+                       
             world.alienPool[activeAlienIndex].gameObject.SetActive(true);
             world.alienPool[activeAlienIndex].active = true;
             world.alienPool[activeAlienIndex].transform.localPosition = characterPos;

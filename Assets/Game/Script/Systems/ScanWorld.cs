@@ -13,14 +13,16 @@ public struct ScanWorld {
             //bullets
             var isBullet = behaviour.GetComponent(typeof(Bullet)) as Bullet;
             if (isBullet != null) {
+                isBullet.gameObject.SetActive(false);
                 world.bulletPool.Add(isBullet);
                 continue;
             }
 
             //Aliens
-            var isAlien = behaviour.GetComponent(typeof(Bullet)) as Bullet;
+            var isAlien = behaviour.GetComponent(typeof(Alien)) as Alien;
             if (isAlien != null) {
-                world.bulletPool.Add(isAlien);
+                isAlien.gameObject.SetActive(false);
+                world.alienPool.Add(isAlien);
                 continue;
             }
 

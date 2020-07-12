@@ -19,3 +19,9 @@ public class Bullet : MonoBehaviour
         
     }
 }
+
+enum BulletType {
+    TYPE1,
+    TYPE2,
+    TYPE3
+}
