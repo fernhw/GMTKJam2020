@@ -11,4 +11,6 @@ public class Settings : MonoBehaviour
 
     public float penguinYUpPivotFix = 0.6f;
 
+    public Vector2 cameraLerpSpeed = new Vector2();
+
 }

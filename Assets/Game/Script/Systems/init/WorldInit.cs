@@ -29,7 +29,8 @@ public class WorldInit:Object {
 
         // Setting initial variables
         // Initial Camera position is set to the spawn
-        data.initialDistanceToCamera = world.cam.transform.localPosition - world.gameStartingSpawn.transform.localPosition;
-
+        data.CameraPositionToSpawnPoint = world.gameStartingSpawn.transform.localPosition - world.cam.transform.localPosition;
+        // initializing lerped camera to main camera
+        data.lerpedCameraPosition = data.CameraPositionToSpawnPoint;
     }
 }

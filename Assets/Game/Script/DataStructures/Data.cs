@@ -11,7 +11,10 @@ public class Data
     public Vector3 characterPositionToCamera = new Vector3();
     public Vector3 characterToPointer = new Vector3();
 
-    public Vector3 initialDistanceToCamera = new Vector3();
+    /// <summary>
+    /// Camera position to spawn point
+    /// </summary>
+    public Vector3 CameraPositionToSpawnPoint = new Vector3();
 
 
     public float angleToMouse = 0;
@@ -27,6 +30,7 @@ public class Data
     /// </summary>
     public bool gameEnd = false;
 
-
+    public Vector3 goalCamPos = new Vector3();
+    public Vector3 lerpedCameraPosition = new Vector3();
 
 }

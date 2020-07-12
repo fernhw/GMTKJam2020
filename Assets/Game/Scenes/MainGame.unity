@@ -279,6 +279,7 @@ MonoBehaviour:
   speed: 1
   characterSpeed: 0.6
   penguinYUpPivotFix: 0.5
+  cameraLerpSpeed: {x: 3, y: 1}
 --- !u!1001 &754774730
 PrefabInstance:
   m_ObjectHideFlags: 0
