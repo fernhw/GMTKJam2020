@@ -108,6 +108,12 @@ public class EnemyAction
             movingAlien.transform.localPosition = newAlienPosition;
             alienPosition = movingAlien.transform.localPosition;
 
+            if(alienMovement.x < 0) {
+                movingAlien.transform.localScale = new Vector3(1,1,1);
+            } else {
+                movingAlien.transform.localScale = new Vector3(-1, 1, 1);
+            }
+
             //movingAlien.asfasgasfg << action TODO
 
 
