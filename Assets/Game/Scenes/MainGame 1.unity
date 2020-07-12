@@ -2334,7 +2334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  characterSpeed: 0.6
+  characterSpeed: 0.2
   bulletSpeed: 10
   penguinYUpPivotFix: 0.5
   alienAppearance: 1
@@ -2583,12 +2583,12 @@ PrefabInstance:
     - target: {fileID: 1714492670762530423, guid: e185248eca34c524ab900f48363cb9a0,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.7285156
+      value: 0.8261719
       objectReference: {fileID: 0}
     - target: {fileID: 1714492670762530423, guid: e185248eca34c524ab900f48363cb9a0,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.9921875
+      value: 0.96875
       objectReference: {fileID: 0}
     - target: {fileID: 1714492670762530423, guid: e185248eca34c524ab900f48363cb9a0,
         type: 3}
