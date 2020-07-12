@@ -19,6 +19,8 @@ public class Data
     public float angleToMouse = 0;
 
     public float alienTimer = 0;
+
+    public bool disableWalk = false;
     
     public GameState gameStatus = GameState.GAME_ACTIVE;
 

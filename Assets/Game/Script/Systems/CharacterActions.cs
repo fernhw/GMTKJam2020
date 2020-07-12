@@ -9,7 +9,7 @@ using UnityEngine;
 
 public class CharacterActions
 {
-    public static void Parse (ref Data data, World world , InputsManager input) {
+    public static void Parse (ref Data data, World world , InputsManager input, Settings settings) {
 
         // moved to calculatereticle.cs
 
@@ -17,7 +17,7 @@ public class CharacterActions
             wandAngle = data.angleToMouse
         };
 
-        world.penguinObj.GameUpdate(charData, input);
+        world.penguinObj.GameUpdate(charData, input,ref data, settings);
 
     }
 }

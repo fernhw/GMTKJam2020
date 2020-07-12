@@ -49,7 +49,7 @@ public class Movement:MonoBehaviour {
         anime = penguinRenderer.GetComponent<Animator>();
     }
     string animationCurrent = "";
-    public void GameUpdate (PenguinData charData, InputsManager input) {
+    public void GameUpdate (PenguinData charData, InputsManager input, ref Data data, Settings settings) {
 
 
 
@@ -94,7 +94,7 @@ public class Movement:MonoBehaviour {
                 anime.playbackTime = 0;
                 animationCurrent = forward;
             }
-
+            data.disableWalk = true;
             disableWalkingAnim = true;
             StopAllCoroutines();
             StartCoroutine(forward_pose());
@@ -102,6 +102,8 @@ public class Movement:MonoBehaviour {
 
         if (disableWalkingAnim)
             return;
+
+        data.disableWalk = false;
 
         bool movingRight = ( input.movement.x > 0 );
         bool movingLeft = ( input.movement.x < 0 );
