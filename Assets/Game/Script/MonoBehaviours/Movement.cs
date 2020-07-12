@@ -9,24 +9,30 @@ public class Movement : MonoBehaviour
 
     [SerializeField] public float speed = 1;
     Animator anime;
+
+    public SpriteRenderer penguinRenderer;
+
     readonly string walk = "walk";
 
+    private void Start () {
+        anime = penguinRenderer.GetComponent<Animator>();
+    }
 
     public void GameUpdate(PenguinData charData, InputsManager input)
     {
-        anime = GetComponent<Animator>();
+        
 
         bool movingRight = ( input.movement.x > 0 );
         bool movingLeft = ( input.movement.x < 0 );
 
         if (movingRight)
         {
-            GetComponent<SpriteRenderer>().flipX = true;
+            penguinRenderer.flipX = true;
             anime.SetBool(walk, true);
         }
         else
         {
-            GetComponent<SpriteRenderer>().flipX = false;
+            penguinRenderer.flipX = false;
             anime.SetBool(walk, false);
         }       
 

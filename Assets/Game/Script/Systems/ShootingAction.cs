@@ -32,7 +32,7 @@ public class ShootingAction {
         }
 
 
-        // animate bullets
+        // ACTIVATE first inactive bullet
         if (controls.actionButton){
             world.bulletPool[activeBulletIndex].gameObject.SetActive(true);
             world.bulletPool[activeBulletIndex].active = true;
@@ -66,7 +66,7 @@ public class ShootingAction {
                 movingBullet.gameObject.SetActive(false);
                 movingBullet.active = false;
             }
-            //world.bulletPool[0].transform.localPosition = characterPos;
+
         }
 
     }
