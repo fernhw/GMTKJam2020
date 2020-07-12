@@ -36,7 +36,7 @@ public class CameraMovement {
         if (data.lerpedCameraPosition.x > 46) {
             data.lerpedCameraPosition.x = 46f;
         }
-
+        
         world.cam.transform.localPosition = data.lerpedCameraPosition;
 
     }
