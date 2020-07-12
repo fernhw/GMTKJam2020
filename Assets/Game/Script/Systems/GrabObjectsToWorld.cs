@@ -10,8 +10,8 @@ public class GrabObjectsToWorld:Object {
         world.endGameSpawn = ( EndGameSpawn )FindObjectOfType(typeof(EndGameSpawn));
         world.gameStartingSpawn = ( GameStartingSpawn )FindObjectOfType(typeof(GameStartingSpawn));
 
-        world.penguinObj = ( Movement )FindObjectOfType(typeof(Movement));
         world.cam = ( MainCamera )FindObjectOfType(typeof(MainCamera));
+        world.penguinObj = ( Movement )FindObjectOfType(typeof(Movement));
 
     }
 }

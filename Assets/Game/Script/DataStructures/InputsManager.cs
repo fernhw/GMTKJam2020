@@ -24,22 +24,28 @@ public class InputsManager
     /// <summary>
     /// Axis X,Y
     /// </summary>
-    public bool actionButton;
+    public bool actionButton = false;
+    public bool holdingActionButton = false;
 
     /// <summary>
     /// A button makes the penguin make a sound
     /// </summary>
-    public bool quak;
+    public bool quak = false;
 
     /// <summary>
-    /// X,Y towards the screen
+    /// X,Y towards the screen.
+    /// FROM THE MIDDLE OF THE SCREEN
     /// </summary>
     public Vector2 pointer;
+
+
 
     /// <summary>
     /// Click the screen
     /// </summary>
-    public bool click;
+    public bool click = false;
+
+
 
 
 }

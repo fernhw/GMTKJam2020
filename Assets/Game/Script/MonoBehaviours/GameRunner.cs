@@ -1,6 +1,7 @@
 ﻿
 using UnityEngine;
 
+
 public class GameRunner : MonoBehaviour {
 
     public World world;
@@ -12,6 +13,8 @@ public class GameRunner : MonoBehaviour {
 
     void Start () {
 
+        ProInput.Init();
+
         GrabObjectsToWorld.Parse(ref world);
 
         WorldInit.Parse(ref world, ref data,ref delta, ref controls);
@@ -20,18 +23,18 @@ public class GameRunner : MonoBehaviour {
 
 
     void Update () {
-
-        GameStatusManager.Parse(ref world, ref data);
-
-        // Will receive players input and modify controls
-        InputReceiver.Parse(ref controls);
         
         //Todo: slow mo modifier in data for effects later
         DeltaTimeSystem.Parse(ref delta);
 
 
+        GameStatusManager.Parse(ref world, ref data);
+
+        // Will receive players input and modify controls
+        InputReceiver.Parse(delta, world, ref controls);
+
         //Todo: all actionable stuff
-        CharacterActions.Parse(world,delta,controls);
+        CharacterActions.Parse(ref data, world, delta, controls, settings);
 
         InputDeleter.Parse(ref controls);
 
