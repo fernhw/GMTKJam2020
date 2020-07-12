@@ -104,7 +104,7 @@ public class EnemyAction {
             for (int j = 0; j < bulletPoolLen; j++) {
                 Bullet bullet = world.bulletPool[j];
 
-                float distance = 
+                //float distance = 
 
 
             }
