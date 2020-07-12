@@ -5,6 +5,8 @@
 
 using UnityEngine;
 
+
+
 public class EnemyAction {
 
     public static void Parse (ref Data data, ref World world, Deltas delta, InputsManager controls, Settings settings) {
@@ -44,11 +46,26 @@ public class EnemyAction {
 
         // ACTIVATE first inactive alien
         if (createAlien && areThereActiveAlien) {
-                       
+
+            int quadrant = Mathf.RoundToInt(Random.value * 3) + 1;
+
+            switch (quadrant) {
+            case 1:
+
+            break;
+            case 2:
+
+            break;
+            case 3:
+
+            break;
+            }
+            
             world.alienPool[activeAlienIndex].gameObject.SetActive(true);
             world.alienPool[activeAlienIndex].active = true;
             world.alienPool[activeAlienIndex].transform.localPosition = characterPos;
             world.alienPool[activeAlienIndex].transform.localEulerAngles = new Vector3(0, 0, data.angleToMouse);
+
         }
 
 
