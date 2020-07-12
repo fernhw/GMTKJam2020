@@ -37,6 +37,8 @@ public class EnemyAction
 
         int activeAlienIndex = 0;
         bool areThereActiveAlien = false;
+
+
         // pick innactive alien
         for (int i = 0; i < alienPoolLen; i++)
         {
@@ -106,9 +108,18 @@ public class EnemyAction
             movingAlien.transform.localPosition = newAlienPosition;
             alienPosition = movingAlien.transform.localPosition;
 
+            //movingAlien.asfasgasfg << action TODO
+
+
+
+
             for (int j = 0; j < bulletPoolLen; j++)
             {
                 Bullet bullet = world.bulletPool[j];
+
+                if (!bullet.active)
+                    continue;
+
                 float xDist = (alienPosition.x - bullet.transform.localPosition.x);
                 float yDist = (alienPosition.y - bullet.transform.localPosition.y);
                 float distance = xDist * xDist + yDist * yDist;
