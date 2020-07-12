@@ -38,6 +38,8 @@ public class ShootingAction {
             world.bulletPool[activeBulletIndex].active = true;
             world.bulletPool[activeBulletIndex].transform.localPosition = characterPos;
             world.bulletPool[activeBulletIndex].transform.localEulerAngles = new Vector3(0, 0, data.angleToMouse);
+
+            world.spell2.Play();
         }
 
 

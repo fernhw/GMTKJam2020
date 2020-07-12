@@ -29,5 +29,6 @@ public class World : MonoBehaviour
     public List<Bullet> bulletPool;
 
 
+    public AudioSource spell2;
 
 }
