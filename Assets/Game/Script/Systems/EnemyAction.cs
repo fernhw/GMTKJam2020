@@ -54,19 +54,14 @@ public class EnemyAction {
 
             float randomizer = Random.value * 16 - 8;
 
-            switch (quadrant) {
-            case 1:
+            if (quadrant == 1) {
 
-            positionSpawn.x = cameraLeftBound;
-            positionSpawn.y = Mathf.Abs(randomizer);
+                positionSpawn.x = cameraLeftBound;
+                positionSpawn.y = Mathf.Abs(randomizer - 1) + 1;
+            } else {
 
-            break;
-            case 2:
-
-            positionSpawn.x = cameraRightBound;
-            positionSpawn.y = Mathf.Abs(randomizer);
-
-            break;
+                positionSpawn.x = cameraRightBound;
+                positionSpawn.y = Mathf.Abs(randomizer - 1) + 1;
             }
 
             positionSpawn.z = world.gameStartingSpawn.transform.localPosition.z;
@@ -103,9 +98,14 @@ public class EnemyAction {
 
             for (int j = 0; j < bulletPoolLen; j++) {
                 Bullet bullet = world.bulletPool[j];
+                float xDist = ( alienPosition.x - bullet.transform.localPosition.x );
+                float yDist = ( alienPosition.y - bullet.transform.localPosition.y );
+                float distance = xDist* xDist + yDist*yDist;
 
-                float distance = 
-
+                if(distance < .1f) {
+                    movingAlien.active = false;
+                    movingAlien.gameObject.SetActive(false);
+                }
 
             }
         }
