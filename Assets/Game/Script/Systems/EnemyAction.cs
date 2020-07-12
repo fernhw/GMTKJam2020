@@ -14,6 +14,7 @@ public class EnemyAction {
 
         if(data.alienTimer > 1) {
             createAlien = true;
+            data.alienTimer = 0;
         }
 
         Vector3 cameraPosition = world.cam.transform.localPosition;
