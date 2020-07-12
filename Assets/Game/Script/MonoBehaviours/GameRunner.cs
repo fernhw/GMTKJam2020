@@ -23,22 +23,25 @@ public class GameRunner : MonoBehaviour {
 
 
     void Update () {
-        
+
         //Todo: slow mo modifier in data for effects later
         DeltaTimeSystem.Parse(ref delta);
-
-
         GameStatusManager.Parse(ref world, ref data);
 
         // Will receive players input and modify controls
         InputReceiver.Parse(delta, world, ref controls);
 
+
+        CalculateReticle.Parse(ref data, world, controls, settings);
+
+
         CharacterMovement.Parse(ref data, ref world, delta, controls, settings);
 
-        CharacterActions.Parse(ref data, world, controls, settings, controls);
+        CharacterActions.Parse(ref data,  world, controls);
 
         CameraMovement.Parse(ref data, ref world, delta, controls, settings);
 
+        // clears input like buttons
         InputDeleter.Parse(ref controls);
 
     }
