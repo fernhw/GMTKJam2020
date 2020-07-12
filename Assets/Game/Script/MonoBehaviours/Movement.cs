@@ -12,6 +12,8 @@ public class Movement : MonoBehaviour
 
     readonly string walk = "walk";
 
+    [SerializeField] public float wandangle;
+
     private void Start () {
         anime = penguinRenderer.GetComponent<Animator>();
     }
@@ -37,7 +39,15 @@ public class Movement : MonoBehaviour
             anime.SetBool(walk, false);
         }
 
-        // charData.wandAngle;
+        wandangle = charData.wandAngle;
+        //Debug.Log(input.click);
+        if (input.actionButton)
+        {
+            Debug.Log("CLICKED");
+            Debug.Log(wandangle);
+        }
+
+
 
     }
 }
