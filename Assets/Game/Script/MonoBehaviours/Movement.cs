@@ -78,6 +78,35 @@ public class Movement:MonoBehaviour {
             StopAllCoroutines();
             StartCoroutine(forward_pose());
         }
+
+
+        // Enemy deaths
+
+        int alienPoolLen = world.alienPool.Count;
+        for (int i = 0; i < alienPoolLen; i++) {
+            Alien movingAlien = world.alienPool[i];
+            Vector3 alienPosition = movingAlien.transform.localPosition;
+
+            float xDist = ( alienPosition.x - this.transform.localPosition.x );
+            float yDist = ( alienPosition.y - this.transform.localPosition.y );
+            float distance = xDist * xDist + yDist * yDist;
+            Debug.Log("collision w/ enemy");
+            Debug.Log(distance);
+
+            if (distance < 0.8f) {
+
+                world.gameOver.Play();
+                Debug.Log("dead");
+                anime.PlayInFixedTime(die);
+                data.gameStatus = GameState.GAME_OVER;
+            } else {
+                Debug.Log("alive");
+            }
+        }
+
+
+
+
         if (disableWalkingAnim)
             return;
 
@@ -108,31 +137,7 @@ public class Movement:MonoBehaviour {
             }
         }
 
-        int alienPoolLen = world.alienPool.Count;
-        for (int i = 0; i < alienPoolLen; i++)
-        {
-            Alien movingAlien = world.alienPool[i];
-            Vector3 alienPosition = movingAlien.transform.localPosition;
-
-            float xDist = (alienPosition.x - this.transform.localPosition.x);
-            float yDist = (alienPosition.y - this.transform.localPosition.y);
-            float distance = xDist * xDist + yDist * yDist;
-            Debug.Log("collision w/ enemy");
-            Debug.Log(distance);
-
-            if (distance < 0.8f)
-            {
-
-                world.gameOver.Play();
-                Debug.Log("dead");
-                anime.PlayInFixedTime(die);
-                data.gameStatus = GameState.GAME_OVER;
-            }
-            else
-            {
-                Debug.Log("alive");
-            }
-        }
+       
 
     }
 }
