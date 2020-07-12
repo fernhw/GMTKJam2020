@@ -47,24 +47,39 @@ public class EnemyAction {
         // ACTIVATE first inactive alien
         if (createAlien && areThereActiveAlien) {
 
+            Vector3 positionSpawn = new Vector3();
+
             int quadrant = Mathf.RoundToInt(Random.value * 3) + 1;
+
+            float randomizer = Random.value * 16 - 8;
 
             switch (quadrant) {
             case 1:
 
+            positionSpawn.x = randomizer;
+            positionSpawn.y = cameraUpperBound;
+
             break;
             case 2:
+
+            positionSpawn.x = cameraRightBound;
+            positionSpawn.y = randomizer;
 
             break;
             case 3:
 
+            positionSpawn.x = cameraLeftBound;
+            positionSpawn.y = randomizer;
+
             break;
             }
-            
+
+            positionSpawn.z = world.gameStartingSpawn.transform.localPosition.z;
+
             world.alienPool[activeAlienIndex].gameObject.SetActive(true);
             world.alienPool[activeAlienIndex].active = true;
-            world.alienPool[activeAlienIndex].transform.localPosition = characterPos;
-            world.alienPool[activeAlienIndex].transform.localEulerAngles = new Vector3(0, 0, data.angleToMouse);
+            world.alienPool[activeAlienIndex].transform.localPosition = positionSpawn;
+            world.alienPool[activeAlienIndex].transform.localEulerAngles = new Vector3(0, 0, 360 -data.angleToMouse);
 
         }
 
