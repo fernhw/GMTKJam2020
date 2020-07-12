@@ -30,6 +30,7 @@ public class EnemyAction {
         characterPos.y += settings.penguinYUpPivotFix;
 
         int alienPoolLen = world.alienPool.Count;
+        int bulletPoolLen = world.bulletPool.Count;
 
         int activeAlienIndex = 0;
         bool areThereActiveAlien = false;
@@ -49,27 +50,21 @@ public class EnemyAction {
 
             Vector3 positionSpawn = new Vector3();
 
-            int quadrant = Mathf.RoundToInt(Random.value * 3) + 1;
+            int quadrant = Mathf.RoundToInt(Random.value * 2) + 1;
 
             float randomizer = Random.value * 16 - 8;
 
             switch (quadrant) {
             case 1:
 
-            positionSpawn.x = randomizer;
-            positionSpawn.y = cameraUpperBound;
+            positionSpawn.x = cameraLeftBound;
+            positionSpawn.y = Mathf.Abs(randomizer);
 
             break;
             case 2:
 
             positionSpawn.x = cameraRightBound;
-            positionSpawn.y = randomizer;
-
-            break;
-            case 3:
-
-            positionSpawn.x = cameraLeftBound;
-            positionSpawn.y = randomizer;
+            positionSpawn.y = Mathf.Abs(randomizer);
 
             break;
             }
@@ -79,7 +74,7 @@ public class EnemyAction {
             world.alienPool[activeAlienIndex].gameObject.SetActive(true);
             world.alienPool[activeAlienIndex].active = true;
             world.alienPool[activeAlienIndex].transform.localPosition = positionSpawn;
-            world.alienPool[activeAlienIndex].transform.localEulerAngles = new Vector3(0, 0, 360 -data.angleToMouse);
+            world.alienPool[activeAlienIndex].transform.localEulerAngles = new Vector3(0, 0, 0);
 
         }
 
@@ -95,23 +90,24 @@ public class EnemyAction {
             Vector3 alienPosition = movingAlien.transform.localPosition;
             Vector3 alienAngle = movingAlien.transform.localEulerAngles;
 
-            Vector3 alienMovement = new Vector3(Mathf.Cos(alienAngle.z * Mathf.Deg2Rad), Mathf.Sin(alienAngle.z * Mathf.Deg2Rad), 0); ;
+            Vector3 anglePosToChar = alienPosition - characterPos;
+
+            float angle = Mathf.Atan2(-anglePosToChar.y, -anglePosToChar.x);
+
+            Vector3 alienMovement = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0); ;
 
             Vector3 newAlienPosition = alienPosition + alienMovement * delta.actionDelta * settings.alienSpeed;
 
             movingAlien.transform.localPosition = newAlienPosition;
             alienPosition = movingAlien.transform.localPosition;
 
-            if (alienPosition.x > cameraRightBound ||
-                alienPosition.x < cameraLeftBound ||
-                alienPosition.y > cameraUpperBound ||
-                alienPosition.y < cameraLowerBound) {
-                movingAlien.gameObject.SetActive(false);
-                movingAlien.active = false;
+            for (int j = 0; j < bulletPoolLen; j++) {
+                Bullet bullet = world.bulletPool[j];
+
+                float distance = 
+
+
             }
-
         }
-
     }
-
 }
