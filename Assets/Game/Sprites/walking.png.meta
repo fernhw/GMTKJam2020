@@ -1,7 +1,19 @@
 fileFormatVersion: 2
-guid: fb80c8a5813f34d6c926e9f7d7b5a372
+guid: c02e6160d4f5d4745824f1852f6a4a4f
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 1943046715530482330
+    second: Pengo_Walk-1
+  - first:
+      213: 908852773675016885
+    second: Pengo_Walk-2
+  - first:
+      213: 8079662406626568764
+    second: Pengo_Walk-3
+  - first:
+      213: -659994173167335629
+    second: Pengo_Walk-4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -36,11 +48,11 @@ TextureImporter:
     mipBias: -100
     wrapU: 1
     wrapV: 1
-    wrapW: -1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,6 +84,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -118,21 +142,93 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Pengo_Walk-1
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 11
+        width: 407
+        height: 498
+      alignment: 9
+      pivot: {x: 0.4078624, y: 0.5140562}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a921f2d61b617fa10800000000000000
+      internalID: 1943046715530482330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pengo_Walk-2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 511
+        width: 381
+        height: 512
+      alignment: 9
+      pivot: {x: 0.41469815, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b2270848c4ec9c00800000000000000
+      internalID: 908852773675016885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pengo_Walk-3
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 5
+        width: 368
+        height: 504
+      alignment: 9
+      pivot: {x: 0.4375, y: 0.50793654}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3aed04a62ab02070800000000000000
+      internalID: 8079662406626568764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pengo_Walk-4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 511
+        width: 381
+        height: 512
+      alignment: 9
+      pivot: {x: 0.41469815, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 337888adbca37d6f0800000000000000
+      internalID: -659994173167335629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
