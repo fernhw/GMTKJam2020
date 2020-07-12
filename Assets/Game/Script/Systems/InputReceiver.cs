@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class InputReceiver {
 
-    public static void Parse (Deltas delta,World world, ref InputsManager controls) {
+    public static void Parse (Deltas delta, World world, ref InputsManager controls) {
 
 
 
@@ -17,8 +17,18 @@ public class InputReceiver {
             float stickSin = Mathf.Sin(stickAngle);
 
             float realJoystickPress = ( joystick.Distance - joystick.DeadZone ) / ( 1 - joystick.DeadZone );
-            controls.movement.x = stickCos;
+
+            if(stickCos > joystick.DeadZone) {
+                controls.movement.x = 1;
+            }
+
+            if (stickCos < -joystick.DeadZone) {
+                controls.movement.x = -1;
+            }
+
+            //controls.movement.x = stickCos;
             controls.movement.y = stickSin;
+
         } else {
             controls.movement.x = 0;
             controls.movement.y = 0;

@@ -10,6 +10,10 @@ public class Data
 
     public Vector3 characterPositionToCamera = new Vector3();
     public Vector3 characterToPointer = new Vector3();
+
+    public Vector3 initialDistanceToCamera = new Vector3();
+
+
     public float angleToMouse = 0;
 
 
